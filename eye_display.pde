@@ -20,7 +20,7 @@ class eye_display
 
  void display(float xpos, float ypos) {
     frame = (frame+1) % imageCount ;
-    image(images[frame], xpos, ypos);
+    image(images[frame], xpos, ypos, width/2, height/3);
   }
   
   int getWidth() {
