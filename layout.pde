@@ -12,9 +12,11 @@ class layout
   void render()
   {
     fill(0);
+    stroke(0,128,0);
     
     rect(0, 0 ,rectW, rectH);
     rect(width*0.75, 0, rectW, rectH);
+    
     
   }
   
