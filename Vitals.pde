@@ -47,7 +47,7 @@ class Vitals
       lastx = nextx;
       lasty = nexty;
     }
-    fill(255);
+    fill(0);
     stroke(255);
     rect(rectW, rectH*2, rectW*2, rectH*2);
   }
