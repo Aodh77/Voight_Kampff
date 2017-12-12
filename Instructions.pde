@@ -2,6 +2,8 @@ class Instructions
 {
   String z, w;
   int x, y, count;
+  int txtw, txth ;
+  
   
   
   Instructions(String z, int x, int y)
@@ -11,6 +13,18 @@ class Instructions
     this.y = y;
     count = 0;
     w = "";
+    txtw = txth = 0;
+    
+  }
+  Instructions(String z, int x, int y, int txtw, int txth)
+  {
+    this.z = z;
+    this.x = x;
+    this.y = y;
+    count = 0;
+    w = "";
+    this.txtw = txtw;
+    this.txth = txth;
   }
   
    void update()
@@ -30,7 +44,15 @@ class Instructions
     {
       w = w + z.charAt(i);
     }
+    if (txtw == 0 || txth == 0)
+    {
     text(w, x, y);
+    }
+    else
+    {
+      text(w, x, y, txtw, txth);
+    }
     w = "";
+    
   }
 } 

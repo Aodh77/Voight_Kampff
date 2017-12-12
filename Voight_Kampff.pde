@@ -4,7 +4,8 @@ SoundFile file1, file2;
 eye_display eye_display1, eye_display2;
 layout layout1;
 Vitals v1, v2;
-Instructions Instructions1, Instructions2;
+Instructions Instructions1, Instructions2, LeonIn, RachaelIn, LeonData, RachaelData;
+topbar topbar1;
 float xpos;
 float ypos;
 int rectx1, recty1, rectx2, recty2;
@@ -25,14 +26,19 @@ void setup()
   file2 = new SoundFile(this, "Rachael_test.mp3");
   Instructions1 = new Instructions("Press Z to play test archive", width/2 - width/8, height/2 + height/4);
   Instructions2 = new Instructions("Press X to stop archive", width/2 - width/8, height/2 + height/3);
+  LeonIn = new Instructions("Leon", height/8 - height/20, width/4 + width/8 );
+  RachaelIn = new Instructions("Rachael", height/8 - height/20 , width/4 );
+  LeonData = new Instructions("Replicaint[M] Des:LEON NEXUS 6  Incept Date:10APRIL.2017  Func:Combat Phys: LEV.A Ment: LEV.C", width - width/4, 10, width/4, height/2);
+  RachaelData = new Instructions("Replicaint[F] Des:RACHAEL NEXUS 7 Incept Date:May 23, 2018 Func:Experimental LEV.C Ment: LEV.A", width - width/4, 10, width/4, height/2);
   v1 = new Vitals(width - (width/4), beat1);
   v2 = new Vitals(width, beat2);
   layout1 = new layout();
+  topbar1 = new topbar();
   background(51);
   rectx1 = width/4 - rectSize*3;
   rectx2 = width/4 - rectSize*3;
   recty1 = height/3;
-  recty2 = height/4;
+  recty2 = height/2;
 }
 
 
@@ -43,6 +49,8 @@ void draw()
   background(0);
   xpos = width/4;
   ypos = 50;
+  topbar1.update();
+  topbar1.render();
   layout1.render();
   v1.render();
   v2.render();
@@ -52,6 +60,12 @@ void draw()
   Instructions1.update();
   Instructions2.render();
   Instructions2.update();
+  LeonIn.render();
+  LeonIn.update();
+  RachaelIn.render();
+  RachaelIn.update();
+  
+  
   
   fill(123);
   if (mouseX >= rectx1 && mouseX <= rectx1+rectSize && 
@@ -71,9 +85,15 @@ void draw()
   if (choice)
   {
     eye_display1.display(xpos, ypos);
+    LeonData.render();
+    LeonData.update();
+    RachaelData.count = 0;
   } else
   {
     eye_display2.display(xpos, ypos);
+    RachaelData.render();
+    RachaelData.update();
+    LeonData.count = 0;
   }
 }
 

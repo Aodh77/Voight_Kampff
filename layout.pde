@@ -11,7 +11,7 @@ class layout
   
   void render()
   {
-    fill(255);
+    fill(0);
     
     rect(0, 0 ,rectW, rectH);
     rect(width*0.75, 0, rectW, rectH);

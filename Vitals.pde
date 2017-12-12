@@ -34,7 +34,7 @@ class Vitals
     
     
     
-    stroke(255, 0, 0);
+    stroke(135,206,250);
     lasty = map(50, 0, 100, 0, rectH);
     lastx = 0;
     for(int i = 0; i<data.length; i++)
@@ -48,7 +48,8 @@ class Vitals
       lasty = nexty;
     }
     fill(0);
-    stroke(255);
+    strokeWeight(3);
+    stroke(0,128,0);
     rect(rectW, rectH*2, rectW*2, rectH*2);
   }
   
