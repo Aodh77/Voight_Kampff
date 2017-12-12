@@ -19,3 +19,6 @@ did the by making 12 small rectangles using a for loop and changed the colour de
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=https://youtu.be/NHlC1D9pPtw
 " target="_blank"><img src="http://img.youtube.com/vi/https://youtu.be/NHlC1D9pPtw/0.jpg" 
 alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
+
+[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/https://youtu.be/NHlC1D9pPtw/0.jpg)](http://www.youtube.com/watch?v=https://youtu.be/NHlC1D9pPtw)
+
