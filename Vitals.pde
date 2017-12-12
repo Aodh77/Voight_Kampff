@@ -16,10 +16,10 @@ class Vitals
   
   void update()
   {
-    x+=10;
+    x+=14;
     if(x > width)
     {
-      x = width - (width/4) - rectW;
+      x = width - (width/2) + (width/40);
     }
   }
   
@@ -47,7 +47,9 @@ class Vitals
       lastx = nextx;
       lasty = nexty;
     }
-    //rect(rectW, rectH/2, rectW*2, rectH/2);
+    fill(255);
+    stroke(255);
+    rect(rectW, rectH*2, rectW*2, rectH*2);
   }
   
 }
